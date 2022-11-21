@@ -20,7 +20,10 @@ function ArtDescription({ galleries }) {
       <h3>Art Description</h3>
 
       <h2>
-        Title: <Link to={targetObject['url']}>{targetObject['title']}</Link>
+        Title:
+        <Link to={{ pathname: targetObject['url'] }} target='_blank'>
+          {targetObject['title']}
+        </Link>
       </h2>
       <img style={{ height: 100 }} src={image['baseimageurl']} />
       <p>Description: {image.description}</p>
