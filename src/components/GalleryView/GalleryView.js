@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Switch, Route } from 'react-router-dom';
+import ArtDescription from '../ArtDescription/ArtDescription';
 import ArtImageTile from '../ArtImageTile/ArtImageTile';
 
 function GalleryView({ galleries }) {
@@ -16,7 +17,12 @@ function GalleryView({ galleries }) {
       <h1>Hello from GalleryView</h1>
       <h2>{targetGallery.name}</h2>
       {targetGallery.objects.map(object => (
-        <ArtImageTile object={object} />
+        <div>
+          <ArtImageTile object={object} galleryId={galleryId} />
+          {/* <Route path={`/galleries/${galleryId}/art/${object.id}`}>
+            <ArtDescription />
+          </Route> */}
+        </div>
       ))}
     </div>
   );

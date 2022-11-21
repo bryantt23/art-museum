@@ -1,7 +1,8 @@
 import harvardArt from './data/harvardArt';
 import GalleryNavigation from './components/GalleryNavigation/GalleryNavigation';
 import GalleryView from './components/GalleryView/GalleryView';
-import { useParams, Switch, Route } from 'react-router-dom';
+import ArtDescription from './components/ArtDescription/ArtDescription';
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
             </p>
           </div>
         </Route>
-
+        <Route path={`/galleries/:galleryId/art/:artId`}>
+          <ArtDescription />
+        </Route>
         <Route path={'/galleries/:galleryId'}>
           <GalleryView galleries={harvardArt.records} />
         </Route>
