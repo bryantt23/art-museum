@@ -19,9 +19,6 @@ function GalleryView({ galleries }) {
       {targetGallery.objects.map(object => (
         <div>
           <ArtImageTile object={object} galleryId={galleryId} />
-          {/* <Route path={`/galleries/${galleryId}/art/${object.id}`}>
-            <ArtDescription />
-          </Route> */}
         </div>
       ))}
     </div>

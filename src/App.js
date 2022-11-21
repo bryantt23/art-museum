@@ -20,7 +20,7 @@ function App() {
           </div>
         </Route>
         <Route path={`/galleries/:galleryId/art/:artId`}>
-          <ArtDescription />
+          <ArtDescription galleries={harvardArt.records} />
         </Route>
         <Route path={'/galleries/:galleryId'}>
           <GalleryView galleries={harvardArt.records} />
